@@ -10,8 +10,8 @@ posting matrices to Librato.
 
 ## Features
 
- * Gauges metrics
- * Counters metrics
+ * Post gauge udate
+ * Post counter update
 
 ## Install
 
