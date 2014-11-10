@@ -28,7 +28,7 @@ librato = new LibratoClient(user, token, options)
 ### Options
 
 * `String` prefix - metrics name prefix
-* `String` source - default source for metrics
+* `String` source - metric source default value
 
 ### librato.measure(`string` key, `number` val, `object` opts, `function` cb)
 
