@@ -1,0 +1,43 @@
+{
+  "name": "librato",
+  "version": "0.1.0",
+  "description": "Librato client for Node",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test",
+    "src": "src",
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "coffee --bare --compile --output lib/ src/*.litcoffee",
+    "prepublish": "coffee --bare --compile --output lib/ src/*.litcoffee",
+    "postpublish": "rm -rf lib/*",
+    "test": "mocha -w -b -c --check-leaks test/suite.coffee -R progress --compilers coffee:coffee-script/register",
+    "test-drone": "INTEGRATION_TEST=true node_modules/.bin/mocha -b -c --check-leaks test/suite.coffee -R spec --compilers coffee:coffee-script/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Turistforeningen/node-librato.git"
+  },
+  "keywords": [
+    "Librato",
+    "Metrics",
+    "Logging",
+    "Statistic",
+    "Statistics",
+    "Stats"
+  ],
+  "author": "Hans Kristian Flaatten <hans.kristian.flaatten@turistforeningen.no>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Turistforeningen/node-librato/issues"
+  },
+  "homepage": "https://github.com/Turistforeningen/node-librato",
+  "devDependencies": {
+    "coffee-script": "~1",
+    "mocha": "~2"
+  },
+  "dependencies": {
+    "request": "~2.47"
+  }
+}
