@@ -30,11 +30,11 @@ librato = new LibratoClient(user, token, options)
 * `String` prefix - metrics name prefix
 * `String` source - metric source default value
 
-### librato.measure(`string` key, `number` val, `object` opts, `function` cb)
+### librato.measure(key, val, opts, cb)
 
 New gauge measurement.
 
-### librato.count(`string` key, `number` val, `object` opts, `function` cb)
+### librato.count(key, val, opts, cb)
 
 New counter increment.
 
