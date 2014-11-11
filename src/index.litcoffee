@@ -25,7 +25,8 @@
         source: opts.source or @opts.source
 
       @_post "metrics", json, (err, res, body) ->
-        cb err, res.statusCode, body
+        return cb err, res.statusCode, body if cb
+        throw err if err
 
     Client.prototype.measure = (key, val, opts, cb) ->
       @metricsPost 'gauges', key, val, opts, cb
