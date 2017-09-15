@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "coffee --bare --compile --output lib/ src/*.litcoffee",
+    "nsp": "nsp check",
     "prepublish": "coffee --bare --compile --output lib/ src/*.litcoffee",
     "postpublish": "rm -rf lib/*",
     "test": "mocha -w -b -c --check-leaks test/suite.coffee -R progress --compilers coffee:coffee-script/register",
@@ -38,6 +39,7 @@
     "mocha": "~2"
   },
   "dependencies": {
+    "nsp": "^2.8.0",
     "request": "~2.47"
   }
 }
