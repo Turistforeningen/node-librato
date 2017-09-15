@@ -40,6 +40,6 @@
   },
   "dependencies": {
     "nsp": "^2.8.0",
-    "request": "~2.47"
+    "request": "~2.81"
   }
 }
